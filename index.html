@@ -7,27 +7,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* سأضع هنا فقط CSS الأساسي، والباقي في ملف منفصل */
-        :root {
-            --primary-color: #2c5282;
-            --secondary-color: #4299e1;
-            --accent-color: #e53e3e;
-            --success-color: #38a169;
-            --warning-color: #d69e2e;
-            --light-color: #f7fafc;
-            --dark-color: #2d3748;
-            --bg-color: #ffffff;
-            --text-color: #2d3748;
+        /* تنسيقات احتياطية في حالة تعذر تحميل CSS */
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #f7fafc;
+            color: #2d3748;
+            text-align: center;
+            padding: 50px;
+            direction: rtl;
         }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Cairo', sans-serif; background: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+        .loading {
+            font-size: 24px;
+            color: #2c5282;
+            margin-top: 50px;
+        }
     </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
-        <!-- سيتم تحميل المحتوى ديناميكياً -->
+        <div class="loading">
+            <i class="fas fa-spinner fa-spin"></i> جاري تحميل التطبيق...
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
